@@ -1,0 +1,72 @@
+/* Base global: reset, tipografia, controles e utilitários. Componentes têm o próprio <style scoped>. */
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html, body, #app { height: 100%; }
+body {
+  margin: 0;
+  background: var(--bg-deeper);
+  color: var(--fg);
+  font: 13px/1.5 var(--font);
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+}
+a { color: var(--purple); }
+::selection { background: rgba(189, 147, 249, .3); }
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-thumb { background: var(--line); border-radius: 8px; border: 2px solid transparent; background-clip: padding-box; }
+::-webkit-scrollbar-track { background: transparent; }
+:focus-visible { outline: 2px solid var(--purple); outline-offset: 2px; }
+
+button, select, input, textarea { font: inherit; color: inherit; }
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+  border: 1px solid transparent; border-radius: 8px; padding: 7px 14px; cursor: pointer;
+  background: var(--surface-hi); color: var(--fg); line-height: 1.2; white-space: nowrap;
+  transition: background .12s, border-color .12s, transform .06s;
+}
+.btn:hover { background: var(--line); }
+.btn:active { transform: translateY(1px); }
+.btn:disabled { opacity: .45; cursor: default; transform: none; }
+.btn.primary { background: var(--purple); color: var(--bg-deeper); font-weight: 600; }
+.btn.primary:hover { background: var(--purple-hi); }
+.btn.ghost { background: transparent; border-color: var(--line); }
+.btn.ghost:hover { background: var(--surface); border-color: var(--comment); }
+.btn.danger { background: var(--red); color: var(--bg-deeper); font-weight: 600; }
+.btn.danger-text { color: var(--red); }
+.btn.sm { padding: 4px 10px; font-size: 12.5px; }
+.icon-btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 30px; height: 30px; border-radius: 8px; border: 0; cursor: pointer;
+  background: transparent; color: var(--muted);
+}
+.icon-btn:hover { color: var(--purple); background: var(--purple-soft); }
+.icon-btn.active { color: var(--purple); }
+
+.field {
+  background: var(--bg-deep); border: 1px solid var(--line); border-radius: 8px; padding: 7px 10px; outline: none; width: 100%;
+}
+.field:focus { border-color: var(--purple); box-shadow: 0 0 0 3px var(--purple-soft); }
+select.field option { background: var(--bg-deep); }
+.label { display: flex; flex-direction: column; gap: 5px; font-size: 12px; color: var(--muted); }
+
+.muted { color: var(--muted); }
+.mono { font-family: var(--mono); }
+.pill { display: inline-flex; align-items: center; gap: 4px; font-size: 10.5px; padding: 1px 8px; border-radius: 20px; background: var(--surface-hi); color: var(--muted); font-weight: 500; white-space: nowrap; }
+.pill.purple { background: var(--purple-soft); color: var(--purple); }
+.pill.red { background: var(--red-soft); color: var(--red); }
+.pill.green { background: rgba(80, 250, 123, .12); color: var(--green); }
+.section-title { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .8px; color: var(--comment); }
+
+.dot { width: 8px; height: 8px; border-radius: 50%; background: var(--comment); flex: none; }
+.dot.busy { background: var(--green); box-shadow: 0 0 0 3px rgba(80, 250, 123, .15); animation: pulse 1.4s infinite; }
+.dot.blocked, .dot.waiting { background: var(--red); box-shadow: 0 0 0 3px rgba(255, 85, 85, .2); animation: pulse 1s infinite; }
+.dot.done { background: var(--purple); }
+@keyframes pulse { 50% { opacity: .4; } }
+@keyframes spin { to { transform: rotate(360deg); } }
+.spinner { width: 12px; height: 12px; border: 2px solid rgba(255, 121, 198, .3); border-top-color: var(--pink); border-radius: 50%; animation: spin .8s linear infinite; flex: none; }
+
+.bar { height: 6px; border-radius: 4px; background: var(--surface-hi); overflow: hidden; }
+.bar > span { display: block; height: 100%; background: var(--purple); border-radius: 4px; transition: width .3s; }
+.bar > span.ok { background: var(--green); }
+.bar > span.warn { background: var(--orange); }
+.bar > span.high { background: var(--red); }

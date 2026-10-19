@@ -1,0 +1,31 @@
+/* Tokens do Leão: tema Dracula (https://draculatheme.com), roxo como cor de ação.
+   Fonte única de cor, raio, fonte e espaçamento; a vitrine fica em /design-system. */
+:root {
+  --bg: #282a36;
+  --bg-deep: #1e1f29;
+  --bg-deeper: #191a21;
+  --surface: #2f3241;
+  --surface-hi: #383a4c;
+  --line: #44475a;
+  --fg: #f8f8f2;
+  --muted: #8b93b8;
+  --comment: #6272a4;
+  --purple: #bd93f9;
+  --purple-hi: #cfb0fc;
+  --purple-soft: rgba(189, 147, 249, .14);
+  --pink: #ff79c6;
+  --cyan: #8be9fd;
+  --green: #50fa7b;
+  --orange: #ffb86c;
+  --red: #ff5555;
+  --red-soft: rgba(255, 85, 85, .1);
+  --yellow: #f1fa8c;
+  --radius-sm: 6px;
+  --radius: 10px;
+  --radius-lg: 14px;
+  --font: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", monospace;
+  --shadow: 0 10px 28px rgba(0, 0, 0, .45);
+  --content-max: 860px;
+  color-scheme: dark;
+}

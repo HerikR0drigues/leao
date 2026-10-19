@@ -1,0 +1,13 @@
+/* Realce de código (highlight.js) nas cores Dracula. */
+.hljs { color: var(--fg); background: transparent; }
+.hljs-keyword, .hljs-selector-tag, .hljs-literal, .hljs-section, .hljs-link, .hljs-meta .hljs-keyword { color: var(--pink); }
+.hljs-string, .hljs-meta .hljs-string, .hljs-regexp { color: var(--yellow); }
+.hljs-number, .hljs-symbol, .hljs-bullet { color: var(--purple); }
+.hljs-title, .hljs-title.function_, .hljs-name, .hljs-attr, .hljs-selector-id, .hljs-selector-class { color: var(--green); }
+.hljs-built_in, .hljs-type, .hljs-class .hljs-title, .hljs-title.class_ { color: var(--cyan); font-style: italic; }
+.hljs-variable, .hljs-template-variable, .hljs-params { color: var(--orange); }
+.hljs-comment, .hljs-quote, .hljs-meta { color: var(--comment); }
+.hljs-deletion { color: var(--red); }
+.hljs-addition { color: var(--green); }
+.hljs-emphasis { font-style: italic; }
+.hljs-strong { font-weight: 700; }
